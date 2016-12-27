@@ -2,7 +2,7 @@
 
 .tree-view {
   font-size: @ui-size;
-  background: @tree-view-background-color;
+  // background: @tree-view-background-color;
 
   .project-root.project-root {
     &:first-child {
@@ -18,7 +18,7 @@
   }
 
   .selected:before {
-    background: @tree-view-background-selected-color;
+    background: @selection;
   }
 }
 
@@ -78,4 +78,9 @@
 .tree-view:focus::before {
   opacity: 1;
   transition-duration: .32s;
+}
+
+.tree-view-scroller {
+    border-image: none;
+    //border-bottom: @border;
 }

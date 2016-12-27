@@ -23,8 +23,10 @@
 		min-width: @ui-size * 15;
 		max-width: @ui-size * 20;
 		border-width: 0 1px 0 0;
-		border-image: linear-gradient(@level-2-color 10px, @base-border-color 200px) 0 1 0 0 stretch;
-		background: @level-2-color;
+		// background: @level-2-color;
+		// border-image: linear-gradient(@level-2-color 10px, @base-border-color 200px) 0 1 0 0 stretch;
+		background: @background2;
+		border-image: linear-gradient(@border, transparent 300px) 0 1 0 0 stretch;
 
 		.btn {
 			white-space: initial;
@@ -35,7 +37,18 @@
 				vertical-align: middle;
 			}
 		}
-
+		.nav.nav-pills li a {
+			background: @background2;
+			transition: background @anim, color @anim;
+		}
+		.nav.nav-pills li a:hover {
+			background: @background3;
+			transition: background @anim, color @anim;
+		}
+		.nav.nav-pills li.active a {
+			background: @selection;
+			transition: background @anim, color @anim;
+		}
 
 	}
 	.nav {
@@ -49,7 +62,7 @@
 	// Sections ------------------------------
 
 	& > .panels {
-		background-color: @level-2-color;
+		background-color: @background2;
 	}
 
 	.section-container {
@@ -87,6 +100,12 @@
 
 	.package-card {
 		padding: @ui-padding;
+        background: @background3;
+        transition: background @anim, color @anim;
+        &:hover {
+            background: @background4;
+            transition: background @anim, color, @anim;
+        }
 		.meta-controls .status-indicator {
 			width: @ui-padding/4;
 			&:before {
@@ -112,6 +131,16 @@
 		padding-top: 0;
 		padding-bottom: 0;
 	}
+	
+	// ???
+	select.form-control {
+		background: @background3;
+		transition: background @anim;
+		&:hover {
+			background-color: @background4;
+			transition: background @anim;
+		}
+	}
 
 	.update-all-button {
 		font-size: .75em;
@@ -122,7 +151,7 @@
 	}
 
 	input[type="checkbox"] {
-		background-color: @background-color-selected;
+		background-color: @background4;
 		&:active,
 		&:checked {
 			background-color: @accent-color;

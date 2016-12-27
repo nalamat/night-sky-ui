@@ -58,9 +58,9 @@
 @overlay-background-color:         @level-2-color;
 @overlay-border-color:             @base-border-color;
 
-@button-background-color:          @level-1-color;
-@button-background-color-hover:    lighten(@button-background-color, 2%);
-@button-background-color-selected: @accent-bg-color;
+@button-background-color:          @background5;
+@button-background-color-hover:    @background6;
+@button-background-color-selected: @background6;
 @button-border-color:              @base-border-color;
 
 @tab-bar-background-color:         @level-3-color;
@@ -95,3 +95,29 @@
 
 // Font -----------------
 @font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+
+// Night Sky variables
+@background : rgb(0  , 0  , 40 );
+@background2: rgb(10 , 10 , 50 );
+@background3: rgb(25 , 25 , 70 );
+@background4: rgb(30 , 30 , 75 );
+@background5: rgb(40 , 40 , 85 );
+@background6: rgb(50 , 50 , 95 );
+@text       : rgb(200, 200, 240);
+@cursor     : rgb(160, 160, 250);
+@selection  : rgb(30 , 30 , 80 );
+@selection2 : rgb(20 , 20 , 60 );
+@selection3 : rgb(42 , 42 , 97 );
+@bordercol  : rgb(40 , 40 , 75 );
+@bordercol  : @background2;
+@border     : 1px solid @bordercol;
+@anim       : .3s;
+
+@keyframes blinker {
+  50% { opacity: 0.0; }
+}
+
+@keyframes blinkerr {
+	from { visibility: visible }
+    to { visibility: hidden }
+}

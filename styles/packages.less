@@ -179,3 +179,33 @@
     border-color: @level-3-color;
   }
 }
+
+.tool-panel, .atom-panel, .status-bar, .panel-bottom {
+    background: none;
+}
+
+.terminal-plus.terminal-view,
+.platformio-ide-terminal.terminal-view {
+    border: @border;
+    // border-top: none;
+
+	.cursor-blink .terminal-cursor {
+		animation: blinker 1.5s linear infinite;
+		animation-delay: 1s;
+	}
+}
+
+.terminal-plus .xterm,
+.platformio-ide-terminal .xterm {
+    background: @background2;
+    color: @text;
+    color: none;
+
+    ::selection {
+        background: lighten(@selection, 50%);
+    }
+
+    .terminal-cursor {
+        background: @cursor;
+    }
+}

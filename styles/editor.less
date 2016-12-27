@@ -28,3 +28,44 @@ atom-text-editor[mini] {
     }
   }
 }
+
+atom-text-editor {
+    color: @text;
+    background: @background2;
+    &, &::shadow {
+        .selection .region {
+          background: @selection;
+        }
+    }
+
+	&::shadow .cursors .cursor {
+		border-color: @cursor;
+		transition: opacity @anim, transform 80ms;
+		// animation: blinker 1s linear infinite;
+	}
+
+	&::shadow .line.cursor-line {
+		background: @selection2;
+	}
+
+	&::shadow .gutter {
+		background: @selection2;
+		.line-number.cursor-line {
+			background: @selection3;
+			&.cursor-line-no-selection {
+				background: @selection;
+			}
+		}
+	}
+}
+
+atom-text-editor[mini], atom-text-editor[mini].is-focused {
+    color: @text;
+    background: @background3;
+	transition: border @anim;
+    &, &::shadow {
+        .selection .region {
+			background-color: @selection;
+        }
+    }
+}
