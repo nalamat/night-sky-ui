@@ -32,23 +32,23 @@ atom-text-editor[mini] {
 atom-text-editor {
     color: @text;
     background: @background2;
-    &, &::shadow {
+    &, &.editor {
         .selection .region {
           background: @selection;
         }
     }
 
-	&::shadow .cursors .cursor {
+    &.editor .cursors .cursor {
 		border-color: @cursor;
 		transition: opacity @anim, transform 80ms;
 		// animation: blinker 1s linear infinite;
 	}
 
-	&::shadow .line.cursor-line {
+	&.editor .line.cursor-line {
 		background: @selection2;
 	}
 
-	&::shadow .gutter {
+	&.editor .gutter {
 		background: @selection2;
 		.line-number.cursor-line {
 			background: @selection3;
@@ -63,7 +63,7 @@ atom-text-editor[mini], atom-text-editor[mini].is-focused {
     color: @text;
     background: @background3;
 	transition: border @anim;
-    &, &::shadow {
+    &, &.editor {
         .selection .region {
 			background-color: @selection;
         }

@@ -1,3 +1,3 @@
 # Night Sky UI theme
 
-Deep blue UI theme with animations for Atom text editor
+Night Sky deep blue UI theme with animations for Atom text editor
