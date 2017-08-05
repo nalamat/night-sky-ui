@@ -1,7 +1,7 @@
 {
   "name": "night-sky-ui",
   "theme": "ui",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Night Sky deep blue UI theme with animations for Atom text editor",
   "keywords": [
     "dark",
